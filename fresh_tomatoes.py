@@ -1,9 +1,12 @@
-import webbrowser
 import os
 import re
+import webbrowser
+from typing import List
 
+from media import Movie
 
 # Styles and scripting for the page
+
 main_page_head = '''
 <!DOCTYPE html>
 <html lang="en">
@@ -85,7 +88,6 @@ main_page_head = '''
 </head>
 '''
 
-
 # The main page layout and title bar
 main_page_content = '''
   <body>
@@ -119,7 +121,6 @@ main_page_content = '''
 </html>
 '''
 
-
 # A single movie entry html template
 movie_tile_content = '''
 <div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="{trailer_youtube_id}" data-toggle="modal" data-target="#trailer">
@@ -129,7 +130,12 @@ movie_tile_content = '''
 '''
 
 
-def create_movie_tiles_content(movies):
+def create_movie_tiles_content(movies: List[Movie]):
+    """
+    Creates and returns a string of html formatted movies from the given list.
+    :param movies: a list of movies of the type media.Movie
+    :return: a string of html formatted movies
+    """
     # The HTML content for this section of the page
     content = ''
     for movie in movies:
@@ -150,7 +156,13 @@ def create_movie_tiles_content(movies):
     return content
 
 
-def open_movies_page(movies):
+def open_movies_page(movies: List[Movie]):
+    """
+    Creates an html file "fresh_tomatoes.html" that displays movies in the given list and opens it using a web browser.
+    :param movies: a list of movies of the type media.Movie
+    :return: nothing
+    """
+
     # Create or overwrite the output file
     output_file = open('fresh_tomatoes.html', 'w')
 
