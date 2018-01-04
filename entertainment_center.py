@@ -6,7 +6,7 @@ from media import Movie
 
 # Create Movie instances from hard coded data
 __m1 = Movie(title='National Lampoon''s Christmas Vacation',
-             poster_image_url='https://www.movieposter.com/posters/archive/main/77/MPW-38615',
+             poster_image_url='http://www.movieposter.com/posters/archive/main/77/MPW-38615',
              trailer_youtube_url='https://www.youtube.com/watch?v=tLVd4ipC5Lc')
 __m2 = Movie(title='Monty Python and the Holy Grail',
              poster_image_url='http://img.moviepostershop.com/monty-python-and-the-holy-grail-movie-poster-1975-1010465239.jpg',
