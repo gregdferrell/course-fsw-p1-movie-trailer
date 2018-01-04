@@ -29,7 +29,9 @@ class EntertainmentCenter:
                    trailer_youtube_url='https://www.youtube.com/watch?v=LG1PlkURjxE')  # noqa
         m3 = Movie(imdb_id='tt0072431',
                    trailer_youtube_url='https://www.youtube.com/watch?v=mOPTriLG5cU')  # noqa
-        self.movies = [m1, m2, m3]
+        m4 = Movie(imdb_id='BADIDTOTESTERRORCONDITION',
+                   trailer_youtube_url='https://www.youtube.com/watch?v=mOPTriLG5cU')  # noqa
+        self.movies = [m1, m2, m3, m4]
 
         # Load movie data from external source: omdb api
         self.__load_movie_data_from_omdb()
