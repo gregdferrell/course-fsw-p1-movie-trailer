@@ -1,10 +1,15 @@
-"""
-app.py is the entry point to the movie trailer website program.
-"""
-
-import fresh_tomatoes
-from entertainment_center import movies
+from entertainment_center import EntertainmentCenter
+from fresh_tomatoes import open_movies_page
 
 if __name__ == '__main__':
-    # Open the movies page with the movies from our entertainment center
-    fresh_tomatoes.open_movies_page(movies=movies)
+    # Initialize an entertainment center
+    entertainment_center = EntertainmentCenter()
+
+    # Get the list of movies from the entertainment center instance and filter
+    # out any that have properties with empty values
+    movies = filter(lambda movie: movie.all_properties_non_empty(),
+                    entertainment_center.movies)
+
+    # Open the movies web page with the filtered list of movies from our
+    # entertainment center
+    open_movies_page(movies=movies)
