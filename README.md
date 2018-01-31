@@ -6,6 +6,7 @@ A list of IMDB ids are hard coded in the application. When run, the app will cal
 # Getting Started
 ### Dependencies
 * Python 3.6.2
+* requests==2.18.4
 
 ### Setup
 * Create a free OMDB API key (from omdbapi.com).
