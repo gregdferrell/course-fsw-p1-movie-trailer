@@ -1,4 +1,4 @@
-# Udacity Full Stack Web Developer Project 1: Movie Trailer Website
+# Movie Trailer Website: Udacity Nanodegree - Full Stack Web Developer Project 1
 The movie trailer website is the first project in the Udacity Nanodegree: Full Stack Web Developer.
 
 A list of IMDB ids are hard coded in the application. When run, the app will call out to the OMDB API to retrieve additional movie information, then create an HTML page to display this information and open this page in a web browser.
